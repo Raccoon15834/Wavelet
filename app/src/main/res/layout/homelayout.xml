@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center"
+        android:text="WAVELET"
+        style="@style/titletext"
+        android:id="@+id/logo"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:layout_constraintTop_toBottomOf="@id/logo"
+        android:src="@drawable/avd_anim"
+        android:id="@+id/wave"/>
+<!--    layer1-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="170dp"
+        app:layout_constraintTop_toBottomOf="@id/wave"
+        android:background="@color/black"
+        app:layout_constraintBottom_toTopOf="@id/myBar">
+        <androidx.constraintlayout.widget.Guideline
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5"
+            android:id="@+id/midline"/>
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/midline"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/description1image"
+        android:src="@drawable/soundvector"/>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/midline"
+        app:layout_constraintTop_toTopOf="parent"
+
+        app:layout_constraintBottom_toBottomOf="@id/description1image">
+        <TextView
+            android:layout_width="match_parent"
+            style="@style/regulartext"
+            android:layout_height="wrap_content"
+            android:text="Press the play button to begin the process for our android vibration therapy. After confirming your settings by selecting a type (Anteater, Capybara, etc.) of vibration setting, the vibrations will automatically begin. Press the pause button to end the session."/>
+    </ScrollView>
+    <!--    layer2-->
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/midline"
+        app:layout_constraintTop_toBottomOf="@id/description1image"
+        app:layout_constraintBottom_toBottomOf="@id/image2"
+        android:id="@+id/description2image"
+        style="@style/regulartext"
+        android:text="Computer-vision powered water log for your water intake."/>
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/midline"
+        android:id="@+id/image2"
+        app:layout_constraintTop_toBottomOf="@id/description1image"
+        android:src="@drawable/soundvector"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/regulartext"
+            app:layout_constraintTop_toBottomOf="@id/description2image"
+            android:text="Created by Anusha Das and Liya Huang"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <include
+        layout="@layout/navbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="60dp"
+        android:layout_width="match_parent"
+        android:id="@+id/myBar"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
